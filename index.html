@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title of the document</title>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<body>
+<h1 id = "asd">DECODER (Slepian table)</h1>
+	<div id ="instructions">
+		<p>В лявото поле се въвежда пораждащата матрица G. Елементите се въвеждат разделени с празно място и на отделни редове.<br> В дясното поле се въвеждат думите, които трябва да се декодират(U1,U2,U3...). Всяка дума се въвежда на отделен ред,<br> а елементите и се отделят с празно място.<br>Когато данните са въведени натиснете бутоната CALCULATE. Ще бъдат изведени всички кодови думи, векторите на грешките, <br>таблицата на Слепиан, и ще се извърши проверка дали въведентие думи са от кода.</p>
+		
+	</div>
+	<div id = "fields">
+		<div id = "matrixG">
+		<class id = "wp1">G</class>
+		<textarea id="g" cols="60" rows="15" wrap="soft"></textarea>
+	</div>
+	<div  id = "matrixU">
+		<class id = "wp1">U</class>
+		<textarea id="u" cols="60" rows="15" wrap="soft"></textarea>
+	</div>
+	<div id="cwev"></div>
+	</div>
+<div class = "btn" id = "calculate">Calculate</div>
+<script type="text/javascript" src="myscript.js"></script>
+</body>
+
+</html>

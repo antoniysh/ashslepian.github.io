@@ -1,0 +1,164 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family:"Lucida Console";
+}
+h1{
+}
+textarea{
+	width: 90%;
+	height: 80%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	align-content: center;
+	background-color: rgba(0,0,0,0.6);
+	resize: none;
+	outline: none;
+	border-radius: 5%;
+	color: white;
+	border-color: red;
+	text-align: center;
+	font-size: 17px;
+	padding: 5px;
+	overflow-wrap: normal;
+
+}
+body{
+	background-color: rgb(30, 30, 30);
+	display: block;
+}
+#asd{
+	color: red;
+	font-size: 10;
+	padding-top: 1%;
+	padding-bottom: 2%;
+	margin-bottom: 2%;
+	text-align: center;
+	background-color: rgb(20,20,20);
+}
+#matrixG{
+	width: 20%;
+	height: 1%;
+	resize: none;
+	margin-left: 5%;
+	border-radius: 5%;
+	display: inline-block;
+	float: left;
+	background-color: red;
+	align-content: center;
+	margin-right: 5%;
+	background-color: rgb(20,20,20);
+}
+#matrixU{
+	width: 20%;
+	height: 1%;
+	resize: none;
+	border-radius: 5%;
+	background-color: red;
+	display: inline-block;
+	outline: none;
+	background-color: rgb(20,20,20);
+	cursor: 
+}
+#calculate{
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	border-radius: 50%;
+	margin-left: 25%;
+	align-content: center;
+	line-height: 100px;
+	color: white;
+}
+.btn{
+	background-color: rgb(0,0,0);
+	border: 1px solid red;
+}
+
+div.btn:hover{
+	background-color: rgb(40,40,40);
+	border: 3px solid red;
+}
+
+textarea::-webkit-scrollbar {
+width: 8px;
+height: 8px;
+background: rgb(40,40,40);
+backface-visibility: 50%;
+border: 1px;
+border-color: red;
+border-radius: 30px;
+display: block;
+z-index: 5;
+}
+
+textarea::-webkit-scrollbar-thumb {
+width: 5px;
+border-radius: 5px;
+backface-visibility: 50%;
+background-color:rgb(20,20,20);
+border: 3px;
+border-color: red;
+}
+#wp1{
+	position: relative;
+	display: block;
+	color: white;
+	z-index: 3;
+	text-align: center;
+	font-size: 30px;
+}
+#instructions{
+	color: white;
+	background-color: rgb(20,20,20);
+	margin-bottom: 2%;
+	margin-left: 1%;
+	margin-right: 1%;
+	border-radius: 10px;
+	border-width: 1px;
+	border-color: red;
+	flex-wrap: all;
+	border-style: solid;
+	display: inline-block;
+	width: auto;
+}
+p{
+	margin-left: 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 20px;
+}
+
+#cwev{
+	width: 40%;
+	height: auto;
+	display: inline-block;
+	background-color: rgb(0,0,0);
+	color: white;
+	border: 2px solid red;
+	border-radius: 5px;
+	min-height: 300px;
+	vertical-align: top;
+	padding-bottom: 5px 5px 5px 5px;
+	margin-bottom: 0px;
+}
+
+td{
+	border: 4px solid black;
+	border-collapse: collapse;
+	padding: 5px 5px 5px 5px;
+}
+table{
+	border-radius: 5px;
+	border: 4px solid red;
+	border-radius: 5px;
+	color: white;
+	display: inline block;
+	border-collapse: none;
+	align-self: top;
+	float: left;
+	margin-left: 5%;
+}
