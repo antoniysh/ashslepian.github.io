@@ -71,12 +71,9 @@ let inputToMatrix = function(matrix){
 			arr1[i] = item.split(/\s*[\s,]\s*/)
 		i++
 	})
-	console.log(arr1)
 	arr1.forEach(item =>{
 		item.forEach( (item, i, self) => self[i] = Number(item))
 	})
-	console.log(arr1)
-
 	return arr1
 }
 
@@ -179,6 +176,7 @@ let findError = function(words){
 		w = 0
 	})
 	let t = (d+1)/2
+	console.log(t)
 	if(t % 1 == 0) {
 		t = t-1}
 	if(t % 1 != 0) {
@@ -247,7 +245,7 @@ let createTable = function (tableData) {
     tableBody.appendChild(row);
   });
   table.appendChild(tableBody);
-  document.body.appendChild(table);
+  document.getElementById("tblDiv").appendChild(table)
 }
 
 let validate = function(arr1,arr2){
@@ -259,7 +257,7 @@ let validate = function(arr1,arr2){
 	})
 	if (arr2.length > 1 ){
 	arr1.forEach((el,i) =>{
-		if(el.length != arr2[i].length) alert("Дължината на думите U не отговаря на матрицата G.");
+		if(el.length != arr2[0].length) alert("Дължината на думите U не отговаря на матрицата G.");
 	})}else{
 		if(arr2[0].length != arr1[0].length) alert("Дължината на думите U не отговаря на матрицата G.");
 	}
