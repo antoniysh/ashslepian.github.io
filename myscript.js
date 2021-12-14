@@ -16,7 +16,8 @@ calculateBtn.addEventListener("click",()=>{
 		self[i] = self[i].join('')
 	})
 	let words = getCodeWords(g)
-	let table = findError(words)
+	let error = findError(words)
+	let table = getTable(words, error)
 	tableToString(table)
 	createTable(table)
 	returnDiv.innerHTML += "Кодови думи: ["
@@ -49,7 +50,7 @@ calculateBtn.addEventListener("click",()=>{
 		}
 		if(check == 0){
 			returnDiv.innerHTML += self[i]
-			returnDiv.innerHTML += " - думата не е открита <br>"
+			returnDiv.innerHTML += (" - думата е с повече от " + error + " грешки <br>")
 
 		}
 	})	
@@ -164,38 +165,43 @@ let zeroWord = function(x){
 }
 
 let findError = function(words){
-	let w  = 0
+	let w = 0
 	let d = 99999
-	let errorVectors = []
-	let errorCombinations = []
-	words.forEach(word => {
-		word.forEach(symbol =>{
+	words.forEach(word=>{
+		word.forEach(symbol=>{
 			if(symbol == 1) w++;
 		})
 		if(w < d && w != 0) d = w;
-		w = 0
+		w = 0;
 	})
 	let t = (d+1)/2
-	console.log(t)
-	if(t % 1 == 0) {
-		t = t-1}
-	if(t % 1 != 0) {
+	if( t % 1 == 0){
+		t = t - 1;
+	}
+	if( t % 1 != 0){
 		t = Math.floor(t)
 	}
+
+	return t;
+}
+
+
+
+let getTable = function(words,t){
+	let errorVectors = []
+	let errorCombinations = []
 	returnDiv.innerHTML += ("Брой грешки, които кодът поправя: " + t +"<br><br>")
-	let errorVectorLength = words[0].length - 1
-	for(let i = 0; i <= errorVectorLength; i++){
+	for(i = 0; i < words[0].length; i++){
 		errorCombinations.push(i)
 	}
-	err = combine(errorCombinations,1);
+	let err = combine(errorCombinations,1)
 	for(let i = err.length - 1; i >= 0; i--){
 		if (err[i].length > t){
 			err.pop()
 		}
 	}
-
 	for(let i = 0; i < err.length; i++){
-		errorVectors.push(zeroWord(errorVectorLength))
+		errorVectors.push(zeroWord(words[0].length - 1))
 	}
 
 	errorVectors.forEach((item,i,self) => {
@@ -203,9 +209,8 @@ let findError = function(words){
 			self[i][el] = 1;
 		})
 	})
-
-
 	
+
 	let table = []
 	table.push(words)
 	for(let i = 1; i <= errorVectors.length; i++){
@@ -219,6 +224,7 @@ let findError = function(words){
 		}
 	}
 	return table
+
 }
 
 let tableToString = function(table){
